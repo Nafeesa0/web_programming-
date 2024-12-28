@@ -1,26 +1,42 @@
-<?php
+<html>
+<head>
+	<title>Student Name</title>
+	<style>
+	body {
+		background-color: beige;
+		font-family: Arial, sans-serif;
+	}
 
-$students = array("Aman", "Manu", "Zayan", "Linta", "Benn");
+	pre {
+		background-color: black;
+		color: white;
+	}
+	</style>
+</head>
+<body>
+	<h1>Student Names</h1>
+	<?php
+		$students = ["Aman", "Manu", "Zayan", "Linta", "Benn"];
 
+		// Display original array
+		echo "<h2>Original Array</h2>";
+		echo "<pre>";
+		print_r($students);
+		echo "</pre>";
+	
+		// Sort array in ascending order
+		asort($students);
+		echo "<h2>Array Sorted with asort();</h2>";
+		echo "<pre>";
+		print_r($students);
+		echo "</pre>";
 
-echo "Array of students: ";
-print_r($students);
-
-
-sort($students);
-echo "<br>Sorted Array (ascending order): ";
-print_r($students);
-
-
- 
-
-$students = array("Aman" => 4, "Manu" => 3, "Zayan" => 6, "Linta" => 1, "Benn" => 2);
-asort($students);
-echo "<br>After asort: ";
-print_r($students);
-
-
-arsort($students);
-echo "<br>After arsort: ";
-print_r($students);
-?>
+		// Sort array in descending order
+		arsort($students);
+		echo "<h2>Array Sorted with arsort();</h2>";
+		echo "<pre>";
+		print_r($students);
+		echo "</pre>";
+	?>
+</body>
+</html>
